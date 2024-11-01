@@ -86,7 +86,7 @@ void PortE_Initialize(void)
 void PortF_Initialize(void)
 {
     /* Clear register */
-    LATF = 0x0F;
+    LATF = 0x00;
     
     /* Pins as digital I/O */
     ANSELF = 0x00;

@@ -44,8 +44,14 @@ void main(void) {
 	 while (ADC_conversionComplete)
          ;
 
-     /* Calcular voltaje analogico */
-     Vadc = ADRESH * (float)19.6E-03;
+     /* Write ADC result (low) to RB7:RB6 */
+	 LATB = ADRESL;
+
+	 /* Write ADC result (high) to RC7:RC0 */
+	 LATC = ADRESH;
+    
+     /* Convert to analog voltage */
+     Vadc = ADRES * (float)19.6E-03;
      
      } /* while */
         
