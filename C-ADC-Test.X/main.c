@@ -8,7 +8,7 @@
 void main(void) {
     
     /* Store ADC result */
-    float Vadc=0;
+    /* float Vadc=0; */
     
     /* System Clock Initialization */
 	CLOCK_Initialize();
@@ -45,13 +45,13 @@ void main(void) {
          ;
 
      /* Write ADC result (low) to RB7:RB6 */
-	 LATB = ADRESL;
+	 LATD = ADRESL;
 
 	 /* Write ADC result (high) to RC7:RC0 */
 	 LATC = ADRESH;
     
      /* Convert to analog voltage */
-     Vadc = ADRES * (float)19.6E-03;
+     //Vadc = ADRES * (float)19.6E-03;
      
      } /* while */
         
